@@ -11,7 +11,8 @@
 |
 */
 
-Route::resource('mm', 'MmController');
+Route::controller('mm', 'MmController');
+Route::controller('qa', 'QaController');
 Route::get('/', function () {
     return view('welcome');
 });

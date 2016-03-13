@@ -9,7 +9,7 @@ use App\Http\Requests;
 class MmController extends Controller
 {
     //
-    public function index() {
+    public function getIndex() {
         return view('mm.index', ['title' => 'TEST']);
     }
 }
