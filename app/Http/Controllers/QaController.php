@@ -16,6 +16,10 @@ class QaController extends Controller
     }
 
     public function getIndex() {
-        $array = $this->qa->getAll();
+    }
+
+    public function getAll() {
+        $array = $this->qa->getAll()->toArray();
+        return view('json', ['json' => json_encode($array)]);
     }
 }
