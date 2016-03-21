@@ -22,4 +22,9 @@ class QaController extends Controller
         $array = $this->qa->getAll()->toArray();
         return view('json', ['json' => json_encode($array)]);
     }
+
+    public function getSingle($id) {
+        $array = $this->qa->getById($id)->toArray();
+        return view('json', ['json' => json_encode($array)]);
+    }
 }
