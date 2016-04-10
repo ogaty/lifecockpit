@@ -14,7 +14,7 @@
 Route::controller('mm', 'MmController');
 Route::controller('qa', 'QaController');
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 /*

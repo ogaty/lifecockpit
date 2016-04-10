@@ -10,6 +10,6 @@ class MmController extends Controller
 {
     //
     public function getIndex() {
-        return view('mm.index', ['title' => 'TEST']);
+        return view('mm.index', ['title' => 'MindMap']);
     }
 }
