@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('/cheat', 'CheatController@index');
+Route::get('cheat/show/{id}', 'CheatController@show');
+
+Route::get('/dateconv', function () {
+    return view('utils/dateconv', ['title' => 'LifeCockpit']);
+});
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', ['title' => 'LifeCockpit']);
 });
