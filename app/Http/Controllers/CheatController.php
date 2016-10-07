@@ -5,13 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Repositories\CheatRepository;
 
-class CheatController.php extends Controller
+class CheatController extends Controller
 {
+    private $cheat = null;
+
+    public function __construct(CheatRepository $cheat) {
+        $this->cheat = $cheat;
+    }
+
     public function index() {
+        $list = $this->cheat->all();
         return view('cheat/index',
             [
-                'title' => 'cheat'
+                'title' => 'cheat',
+                'list' => $list
             ]
         );
     }
@@ -24,4 +33,41 @@ class CheatController.php extends Controller
             ]
         );
     }
+
+    public function create() {
+        return view('cheat/create',
+            [
+                'title' => 'cheat'
+            ]
+        );
+    }
+
+    public function store() {
+        return redirect('cheat');
+    }
+
+    public function edit($id) {
+        return view('cheat/edit',
+            [
+                'title' => 'cheat'
+            ]
+        );
+    }
+
+    public function update($id) {
+        return view('cheat/update',
+            [
+                'title' => 'cheat'
+            ]
+        );
+    }
+
+    public function destroy($id) {
+        return view('cheat/destroy',
+            [
+                'title' => 'cheat'
+            ]
+        );
+    }
+
 }
