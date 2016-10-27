@@ -16,7 +16,6 @@ Route::group(['domain' => 'ogatism.com'], function() {
         return view('home', ['title' => 'ogatism.com']);
     });
 });
-
 Route::group(['domain' => 'microcosm.ogatism.com'], function() {
     Route::get('/', function () {
         return view('home', ['title' => 'microcosm']);
