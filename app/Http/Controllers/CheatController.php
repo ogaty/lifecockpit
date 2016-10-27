@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Repositories\CheatRepository;
+use Illuminate\Support\Facades\Auth;
 
 class CheatController extends Controller
 {
@@ -13,6 +14,7 @@ class CheatController extends Controller
 
     public function __construct(CheatRepository $cheat) {
         $this->cheat = $cheat;
+        $this->middleware('auth');
     }
 
     public function index() {
@@ -20,6 +22,7 @@ class CheatController extends Controller
         return view('cheat/index',
             [
                 'title' => 'cheat',
+                'pagetitle' => 'cheat',
                 'list' => $list
             ]
         );
@@ -29,6 +32,7 @@ class CheatController extends Controller
         return view('cheat/show',
             [
                 'title' => 'cheat',
+                'pagetitle' => 'cheat',
                 'id' => $id
             ]
         );
@@ -37,7 +41,8 @@ class CheatController extends Controller
     public function create() {
         return view('cheat/create',
             [
-                'title' => 'cheat'
+                'title' => 'cheat',
+                'pagetitle' => 'cheat',
             ]
         );
     }
@@ -49,7 +54,8 @@ class CheatController extends Controller
     public function edit($id) {
         return view('cheat/edit',
             [
-                'title' => 'cheat'
+                'title' => 'cheat',
+                'pagetitle' => 'cheat',
             ]
         );
     }
@@ -57,7 +63,8 @@ class CheatController extends Controller
     public function update($id) {
         return view('cheat/update',
             [
-                'title' => 'cheat'
+                'title' => 'cheat',
+                'pagetitle' => 'cheat',
             ]
         );
     }
@@ -65,7 +72,8 @@ class CheatController extends Controller
     public function destroy($id) {
         return view('cheat/destroy',
             [
-                'title' => 'cheat'
+                'title' => 'cheat',
+                'pagetitle' => 'cheat',
             ]
         );
     }

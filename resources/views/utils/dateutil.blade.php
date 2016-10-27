@@ -2,7 +2,7 @@
 
 @section('css')
         <style>
-        div {
+        div.dateconv {
             padding: 2px;
         }
         </style>
@@ -75,34 +75,34 @@ $(function() {
 @stop
 
 @section('body')
-    <div>
+    <div class="dateconv">
         <button id="current">現在</button>
     </div>
-    <div>
+    <div class="dateconv">
         <input type="text" id="unixtime">(秒)
     </div>
-    <div>
+    <div class="dateconv">
         <button id="down">↓</button>
         <button id="up">↑</button>
     </div>
-    <div>
+    <div class="dateconv">
         <input type="text" id="year" maxlength="4" size="4">/<input type="text" id="month" maxlength="2" size="2">/<input type="text" id="day" maxlength="2" size="2">
         <input type="text" id="hour" maxlength="2" size="2">:<input type="text" id="min" maxlength="2" size="2">:<input type="text" id="sec" maxlength="2" size="2">
     </div>
-    <div>
+    <div class="dateconv">
         <button id="prev">前日</button>
         <button id="next">翌日</button>
     </div>
 
     <hr>
 
-    <div>
+    <div class="dateconv">
         <input type="text" id="from_time8h">(秒)
     </div>
-    <div>
+    <div class="dateconv">
         <button id="down8h">↓</button>
     </div>
-    <div>
+    <div class="dateconv">
         <input type="text" id="to_time8h">(時間)
     </div>
 
@@ -110,6 +110,5 @@ $(function() {
 <?php
     echo $_SERVER['HTTP_USER_AGENT'];
 ?>
-
 @stop
 
