@@ -13,6 +13,8 @@ return [
     */
 
     'name' => 'LifeCockpit',
+    'lcname' => 'LifeCockpit',
+    'tcname' => 'TechCockpit',
 
     /*
     |--------------------------------------------------------------------------

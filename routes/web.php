@@ -22,7 +22,7 @@ Route::group(['domain' => 'microcosm.ogatism.com'], function() {
     });
 });
 
-Route::group(['domain' => 'lc.ogatism.com'], function(){
+Route::group(['domain' => 'tc.ogatism.com'], function(){
     Route::get('cheat', 'CheatController@index');
     Route::get('cheat/create', 'CheatController@create');
     Route::post('cheat', 'CheatController@store');
@@ -38,7 +38,7 @@ Route::group(['domain' => 'lc.ogatism.com'], function(){
     Auth::routes();
 });
 
-Route::group(['domain' => 'lc.astrominit.com'], function(){
+Route::group(['domain' => 'tc.astrominit.com'], function(){
     Route::get('cheat', 'CheatController@index');
     Route::get('cheat/create', 'CheatController@create');
     Route::post('cheat', 'CheatController@store');
@@ -49,6 +49,18 @@ Route::group(['domain' => 'lc.astrominit.com'], function(){
     Route::get('business', 'BusinessController@index');
     Route::get('opensocial', 'LockedController@opensocial');
     Route::get('dateutil', 'LockedController@dateutil');
+    Route::get('home', 'HomeController@index');
+    Route::get('/', 'HomeController@index');
+    Auth::routes();
+});
+
+Route::group(['domain' => 'lc.ogatism.com'], function(){
+    Route::get('home', 'HomeController@index');
+    Route::get('/', 'HomeController@index');
+    Auth::routes();
+});
+
+Route::group(['domain' => 'lc.astrominit.com'], function(){
     Route::get('home', 'HomeController@index');
     Route::get('/', 'HomeController@index');
     Auth::routes();

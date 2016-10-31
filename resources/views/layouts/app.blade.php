@@ -8,8 +8,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    @if (url('/') == 'http://lc.astrominit.com' || url('/') == 'http://lc.ogatism.com')
+        <title>{{ config('app.lcname', 'LifeCockpit') }}</title>
+    @else
+        <title>{{ config('app.tcname', 'TechCockpit') }}</title>
+    @endif
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
@@ -36,7 +39,11 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        @if (url('/') == 'http://lc.astrominit.com' || url('/') == 'http://lc.ogatism.com')
+                            {{ config('app.lcname', 'LifeCockpit') }}
+                        @else
+                            {{ config('app.tcname', 'TechCockpit') }}
+                        @endif
                     </a>
                 </div>
 
