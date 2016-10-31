@@ -12,9 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'LifeCockpit',
-    'lcname' => 'LifeCockpit',
-    'tcname' => 'TechCockpit',
+    'name' => getenv('APPNAME'),
 
     /*
     |--------------------------------------------------------------------------
