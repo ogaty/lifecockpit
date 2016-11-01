@@ -180,6 +180,7 @@ return [
 
         'Jenssegers\Date\DateServiceProvider',
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
     ],
 
     /*
@@ -228,6 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Date' => Jenssegers\Date\Date::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 

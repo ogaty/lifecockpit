@@ -9,6 +9,7 @@
 @yield('css')
 <script typee="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
 @yield('js')
 </head>
@@ -29,7 +30,7 @@
                         <li class="pure-menu-item"><a href="{{ url('/register') }}" class="pure-menu-link">Register</a></li>
                     @else
                     <li class="pure-menu-item"><a href="/opensocial" class="pure-menu-link">OpenSocial</a></li>
-                    <li class="pure-menu-item"><a href="/dateutil" class="pure-menu-link">Date Conv</a></li>
+                    <li class="pure-menu-item"><a href="/dateutil" class="pure-menu-link">Date Util</a></li>
                     <li class="pure-menu-item"><a href="/cheat" class="pure-menu-link">Cheat</a></li>
                     <li class="pure-menu-item">
                         <a href="{{ url('/logout') }}" class="pure-menu-link"
