@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\SidenavController;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $sideinfo = \App\Http\Controllers\SidenavController::sidenav();
+        return view('home', [
+            'title' => config('app.name', 'LifeCockpit'),
+            'pagetitle' => 'Home',
+            'categories' => $sideinfo['categories']
+        ]);
     }
 }

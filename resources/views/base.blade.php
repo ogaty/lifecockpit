@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex">
-<title>{{{$title}}}</title>
+<title>{{{$title or 'LifeCockpit'}}}</title>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
 <link rel="stylesheet" href="/css/pure/side-menu.css">
 @yield('css')
@@ -22,16 +22,18 @@
 
         <div id="menu">
             <div class="pure-menu">
-                <a class="pure-menu-heading" href="#">LifeCockpit</a>
+                <a class="pure-menu-heading" href="{{ url('/') }}">{{ config('app.name', 'LifeCockpit') }}</a>
 
                 <ul class="pure-menu-list">
                     @if (Auth::guest())
                         <li class="pure-menu-item"><a href="{{ url('/login') }}" class="pure-menu-link">Login</a></li>
                         <li class="pure-menu-item"><a href="{{ url('/register') }}" class="pure-menu-link">Register</a></li>
                     @else
-                    <li class="pure-menu-item"><a href="/opensocial" class="pure-menu-link">OpenSocial</a></li>
-                    <li class="pure-menu-item"><a href="/dateutil" class="pure-menu-link">Date Util</a></li>
-                    <li class="pure-menu-item"><a href="/cheat" class="pure-menu-link">Cheat</a></li>
+                    @if (isset($categories))
+                    @foreach ($categories as $category)
+                    <li class="pure-menu-item"><a href="{{ url('/category/' . $category->id) }}" class="pure-menu-link">{{ $category->jpname }}</a></li>
+                    @endforeach
+                    @endif
                     <li class="pure-menu-item">
                         <a href="{{ url('/logout') }}" class="pure-menu-link"
                                  onclick="event.preventDefault();
@@ -49,8 +51,8 @@
 
         <div id="main">
             <div class="header">
-                <h1>{{{$pagetitle}}}</h1>
-                <h2>A subtitle for your page goes here</h2>
+                <h1>{{{$pagetitle or 'LifeCockpit'}}}</h1>
+                <h2></h2>
             </div>
 
             <div class="content">

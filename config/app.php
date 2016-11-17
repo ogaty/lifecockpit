@@ -181,6 +181,7 @@ return [
         'Jenssegers\Date\DateServiceProvider',
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
     ],
 
     /*
