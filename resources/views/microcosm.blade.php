@@ -25,46 +25,78 @@ $(document).ready( function () {
     <hr>
 
     <div class="section">
-    microcosmは西洋占星術で使用されるホロスコープ作成支援ソフトです。<br>
-    </div>
-
-    <h2>特徴</h2>
-    <div class="section">
-        <div class="feature pure-g">
-            <div class="item pure-u-1-3">
-                windows,mac両対応
-            </div>
-            <div class="item pure-u-1-3">
-                swiss Ephemeris使用
-            </div>
-            <div class="item pure-u-1-3">
-                柔軟なオーブ設定
-            </div>
-            <div class="item pure-u-1-3">
-                他ソフトインポート
-            </div>
-            <div class="item pure-u-1-3">
-                CPSサポート
-            </div>
-            <div class="item pure-u-1-3">
-                GPLライセンス
-            </div>
+        <div class="section-inner">
+        microcosmは西洋占星術で使用されるホロスコープ作成支援ソフトです。<br>
+        最新のシステムで快適に動作することを目的として作成しました。
         </div>
     </div>
 
-    <h2>ラインナップ</h2>
+    <div class="section color">
+    <h2>お知らせ</h2>
+        <div class="section-inner">
+        </div>
+    </div>
+
     <div class="section">
-    <dl>
+    <h2>特徴</h2>
+        <div class="section-inner">
+        <div class="feature pure-g">
+            <div class="item pure-u-1-3">
+                <div class="item-inner">
+                    windows,mac両対応
+                </div>
+            </div>
+            <div class="item pure-u-1-3">
+                <div class="item-inner">
+                    swiss Ephemeris使用
+                </div>
+            </div>
+            <div class="item pure-u-1-3">
+                <div class="item-inner">
+                    柔軟なオーブ設定
+                </div>
+            </div>
+            <div class="item pure-u-1-3">
+                <div class="item-inner">
+                    他ソフトインポート
+                </div>
+            </div>
+            <div class="item pure-u-1-3">
+                <div class="item-inner">
+                    CPSサポート
+                </div>
+            </div>
+            <div class="item pure-u-1-3">
+                <div class="item-inner">
+                    GPLライセンス
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="section color">
+    <h2>スクリーンショット</h2>
+    </div>
+
+    <div class="section">
+    <h2>ラインナップ</h2>
+        <div class="section-inner">
+        <dl>
         <dt>microcosm lite</dt>
         <dd>旧windowsでも動作可能なバージョンです。機能追加やサポートは最低限となります。</dd>
         <dt>microcosm</dt>
         <dd>windows storeで配布されるwindows10用バージョンです。</dd>
         <dt>microcosm for Mac</dt>
         <dd>Mac OSX用バージョンです。</dd>
+        </dl>
+        ライセンスはいずれもGPL v2となります。
+        </div>
     </div>
 
-    <h2>機能比較</h2>
     <div class="section">
+    <h2>機能比較</h2>
+        <div class="section-inner">
         <table id="compare">
             <thead>
                 <tr>
@@ -167,10 +199,65 @@ $(document).ready( function () {
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
+
+    <div class="section color">
+        <h2>開発者</h2>
+        <div class="section-inner">
+        <h3>オガティ</h3>
+        <div class="info">
+             <div>
+             Web業界に勤務するシステムエンジニア。個人としてもブロガー、電子書籍執筆など幅広く活動。<br>
+             2014年より占星術師みけまゆみの元で本格的な占星術を学ぶ。<br>
+             既存のホロスコープ作成ソフトが気に入らなかったため、独自の占星術ソフト「microcosm」の開発を始めるようになる。
+             </div>
+             <div>
+             <a href="https://ogatism.jp/">ブログ「ogatism」</a><br>
+             <a href="https://ogatism.jp/">Amazon著者ページ</a><br>
+             <a href="https://ogatism.jp/">占い鑑定依頼はこちらまで</a><br>
+             </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="section">
     <h2>ダウンロード</h2>
+        <div class="section-inner">
+        <div class="dl">
+            <h3>microcosm Lite</h3>
+            <p>対応OS: windows7/windows8.1/windows10</p>
+            <div><a href="">ダウンロード</a></div>
+        </div>
+        <div class="dl">
+            <h3>microcosm</h3>
+            <p>対応OS: Windows10</p>
+            <div>開発中</div>
+        </div>
+        <div class="dl">
+            <h3>microcosm for Mac</h3>
+            <p>対応OS: Mac OS X</p>
+            <div>開発中</div>
+        </div>
+        </div>
+    </div>
+
+    <div class="section color">
+    <h2>FAQ</h2>
+        <div class="section-inner">
+        <dl>
+            <dt>チャートを自分のサイトやブログに載せて良いですか？</dt>
+            <dd>当ソフトはGPL v2ライセンスですので、使用に関する制限はありません。ご自由にお使いください。</dd>
+            <dt>この機能が欲しい、この天体を表示させたい</dt>
+            <dd>内容によっては今後のバージョンで検討するかもしれないので個別に相談いただければと思います。</dd>
+            <dt>Is there English version?</dt>
+            <dd>No. But I want to support English language someday.</dd>
+        </dl>
+        </div>
+    </div>
 
     <div class="footer">
+    <p>microcosm</p>
     (c) ogatism
     </div>
 </div>

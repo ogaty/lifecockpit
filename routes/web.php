@@ -18,12 +18,12 @@ Route::group(['domain' => 'ogatism.com'], function() {
 });
 Route::group(['domain' => 'microcosm.ogatism.com'], function() {
     Route::get('/', function () {
-        return view('microcosm', ['title' => 'microcosm', 'pagetitle' => 'microcosm']);
+        return view('microcosm', ['title' => '占星術ソフト「microcosm」', 'pagetitle' => 'microcosm']);
     });
 });
 Route::group(['domain' => 'microcosm.astrominit.com'], function() {
     Route::get('/', function () {
-        return view('microcosm', ['title' => 'microcosm', 'pagetitle' => 'microcosm']);
+        return view('microcosm', ['title' => '占星術ソフト「microcosm」', 'pagetitle' => 'microcosm']);
     });
 });
 
