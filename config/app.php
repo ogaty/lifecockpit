@@ -178,7 +178,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        'Jenssegers\Date\DateServiceProvider',
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
@@ -229,7 +228,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'Date' => Jenssegers\Date\Date::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
