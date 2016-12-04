@@ -4,6 +4,7 @@
     <title>{{{$title or  'microcosm'}}}</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/microcosm.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
@@ -34,6 +35,9 @@ $(document).ready( function () {
     <div class="section color">
     <h2>お知らせ</h2>
         <div class="section-inner">
+            <ul>
+                <li>2016/12/xx mac版 ver1.0 リリースしました！</li>
+            </ul>
         </div>
     </div>
 
@@ -43,32 +47,68 @@ $(document).ready( function () {
         <div class="feature pure-g">
             <div class="item pure-u-1-3">
                 <div class="item-inner">
-                    windows,mac両対応
+                    <div class="head">
+                        <span class="icon"><i class="fa fa-desktop" aria-hidden="true"></i></span><br>
+                        windows,mac両対応
+                    </div>
+                    <div class="body">
+                        Macに対応していない占星術ソフトも多いですが、当ソフトはMac版も開発しております。
+                    </div>
                 </div>
             </div>
             <div class="item pure-u-1-3">
                 <div class="item-inner">
-                    swiss Ephemeris使用
+                    <div class="head">
+                        <span class="icon"><i class="fa fa-file-archive-o" aria-hidden="true"></i></span><br>
+                        swiss Ephemeris使用
+                    </div>
+                    <div class="body">
+                        当ソフトも様々なソフトで使用されているswiss Ephemerisライブラリを使用しております。
+                    </div>
                 </div>
             </div>
             <div class="item pure-u-1-3">
                 <div class="item-inner">
-                    柔軟なオーブ設定
+                    <div class="head">
+                        <span class="icon"><i class="fa fa-sliders" aria-hidden="true"></i></span><br>
+                        柔軟なオーブ設定
+                    </div>
+                    <div class="body">
+                        太陽と月のみソフトオーブ8度、その他の天体は6度といった設定も可能です。
+                    </div>
                 </div>
             </div>
             <div class="item pure-u-1-3">
                 <div class="item-inner">
-                    他ソフトインポート
+                    <div class="head">
+                        <span class="icon"><i class="fa fa-sign-in" aria-hidden="true"></i></span><br>
+                        他ソフトインポート
+                    </div>
+                    <div class="body">
+                        他社（他者）製のソフトで作成したホロスコープも読み込みできます。
+                    </div>
                 </div>
             </div>
             <div class="item pure-u-1-3">
                 <div class="item-inner">
-                    CPSサポート
+                    <div class="head">
+                        <span class="icon"><i class="fa fa-cube" aria-hidden="true"></i></span><br>
+                        CPSサポート
+                    </div>
+                    <div class="body">
+                        CPS(Composission Progress System)に対応しています。
+                    </div>
                 </div>
             </div>
             <div class="item pure-u-1-3">
                 <div class="item-inner">
-                    GPLライセンス
+                    <div class="head">
+                        <span class="icon"><i class="fa fa-id-card" aria-hidden="true"></i></span><br>
+                        GPLライセンス
+                    </div>
+                    <div class="body">
+                        当ソフトはGPLライセンスにて提供していますので、ダウンロード後の制限はありません。
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,17 +117,25 @@ $(document).ready( function () {
 
     <div class="section color">
     <h2>スクリーンショット</h2>
+        <div class="imgs">
+            <a href="/img/sample1.png">
+                <img src="/img/sample1-mini.png">
+            </a>
+            <a href="/img/sample2.png">
+                <img src="/img/sample2-mini.png">
+            </a>
+        </div>
     </div>
 
-    <div class="section">
+    <div class="section color2">
     <h2>ラインナップ</h2>
         <div class="section-inner">
         <dl>
-        <dt>microcosm lite</dt>
+        <dt class="lineup">microcosm lite</dt>
         <dd>旧windowsでも動作可能なバージョンです。機能追加やサポートは最低限となります。</dd>
-        <dt>microcosm</dt>
+        <dt class="lineup">microcosm</dt>
         <dd>windows storeで配布されるwindows10用バージョンです。</dd>
-        <dt>microcosm for Mac</dt>
+        <dt class="lineup">microcosm for Mac</dt>
         <dd>Mac OSX用バージョンです。</dd>
         </dl>
         ライセンスはいずれもGPL v2となります。
@@ -186,6 +234,12 @@ $(document).ready( function () {
                     <td class="center">開発中</td>
                 </tr>
                 <tr>
+                    <td>他ソフト出生図インポート</td>
+                    <td class="center">○</td>
+                    <td class="center">開発中</td>
+                    <td class="center">開発中</td>
+                </tr>
+                <tr>
                     <td>ソーラーリターン</td>
                     <td class="center">開発中</td>
                     <td class="center">開発中</td>
@@ -214,8 +268,8 @@ $(document).ready( function () {
              </div>
              <div>
              <a href="https://ogatism.jp/">ブログ「ogatism」</a><br>
-             <a href="https://ogatism.jp/">Amazon著者ページ</a><br>
-             <a href="https://ogatism.jp/">占い鑑定依頼はこちらまで</a><br>
+             <a href="https://www.amazon.co.jp/%E7%B7%92%E5%BD%A2%E9%9B%84%E4%BA%8C/e/B00OBDISS8/">Amazon著者ページ</a><br>
+             <a href="https://wowme.jp/gigs/2035">占い鑑定依頼はこちらまで</a><br>
              </div>
         </div>
         </div>
@@ -226,18 +280,18 @@ $(document).ready( function () {
         <div class="section-inner">
         <div class="dl">
             <h3>microcosm Lite</h3>
-            <p>対応OS: windows7/windows8.1/windows10</p>
-            <div><a href="">ダウンロード</a></div>
+            <div>対応OS: windows7/windows8.1/windows10</div>
+            <div class="dl-link"><a href="https://ogatism.jp/file/microcosm03.zip">ダウンロード</a></div>
         </div>
         <div class="dl">
             <h3>microcosm</h3>
-            <p>対応OS: Windows10</p>
-            <div>開発中</div>
+            <div>対応OS: Windows10</div>
+            <div class="dl-link">開発中</div>
         </div>
         <div class="dl">
             <h3>microcosm for Mac</h3>
-            <p>対応OS: Mac OS X</p>
-            <div>開発中</div>
+            <div>対応OS: Mac OS X</div>
+            <div class="dl-link">開発中</div>
         </div>
         </div>
     </div>
@@ -246,19 +300,18 @@ $(document).ready( function () {
     <h2>FAQ</h2>
         <div class="section-inner">
         <dl>
-            <dt>チャートを自分のサイトやブログに載せて良いですか？</dt>
+            <dt class="faq">チャートを自分のサイトやブログに載せて良いですか？</dt>
             <dd>当ソフトはGPL v2ライセンスですので、使用に関する制限はありません。ご自由にお使いください。</dd>
-            <dt>この機能が欲しい、この天体を表示させたい</dt>
+            <dt class="faq">この機能が欲しい、この天体を表示させたい</dt>
             <dd>内容によっては今後のバージョンで検討するかもしれないので個別に相談いただければと思います。</dd>
-            <dt>Is there English version?</dt>
+            <dt class="faq">Is there English version?</dt>
             <dd>No. But I want to support English language someday.</dd>
         </dl>
         </div>
     </div>
 
     <div class="footer">
-    <p>microcosm</p>
-    (c) ogatism
+    <p>microcosm  (c) ogatism</p>
     </div>
 </div>
 </body>

@@ -1,7 +1,7 @@
+AuthUserfile /www/.htpasswd
+AuthName "Please enter your ID and password"
 AuthType Basic
-AuthName "user"
-AuthUserFile "/www/.htpasswd"
-Require valid-user
+require valid-user
 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>

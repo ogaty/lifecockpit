@@ -14,21 +14,64 @@ h2 {
   box-sizing: border-box; }
 
 .item-inner {
-  border: 1px solid #ffc67c; }
+  border: 1px solid #ffc67c;
+  padding: 8px;
+  min-height: 12em; }
+
+.item-inner .head {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ccbb44; }
+
+.item-inner .body {
+  margin-top: 1em; }
+
+.icon {
+  font-size: 3em;
+  color: #f05279; }
+
+.imgs {
+  width: 100%;
+  text-align: center; }
+
+.imgs a {
+  margin-left: 10px;
+  margin-right: 10px; }
 
 .center {
   text-align: center; }
 
 .section {
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 30px; }
 
 .color {
   background: #f2f2f2; }
 
+.color2 {
+  background: #f8f8f8; }
+
 .section-inner {
   width: 800px;
   margin: 0 auto; }
+
+dt.lineup {
+  margin-top: 4px;
+  border-bottom: 1px dotted #ffc67c; }
+
+.dl {
+  border: 1px solid #ffc67c;
+  padding: 12px;
+  margin-bottom: 1em; }
+
+.dl h3 {
+  margin-top: 0px; }
+
+.dl-link {
+  text-align: right; }
+
+.faq {
+  margin: 4px 0px; }
 
 .footer {
   padding: 15px 0px;
