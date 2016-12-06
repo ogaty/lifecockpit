@@ -16,12 +16,12 @@ Route::group(['domain' => 'ogatism.com'], function() {
         return view('ogatism', ['title' => 'ogatism.com', 'pagetitle' => 'ogatism.com']);
     });
 });
-Route::group(['domain' => 'microcosm.ogatism.com'], function() {
-    microcosm_route();
-});
-Route::group(['domain' => 'microcosm.astrominit.com'], function() {
-    microcosm_route();
-});
+Route::group(['domain' => 'microcosm.ogatism.com'], 
+    microcosm_route
+);
+Route::group(['domain' => 'microcosm.astrominit.com'], 
+    microcosm_route
+);
 
 Route::group(['domain' => 'tc.ogatism.com'], function(){
     Route::get('cheat', 'CheatController@index');
