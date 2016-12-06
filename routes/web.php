@@ -17,13 +17,15 @@ Route::group(['domain' => 'ogatism.com'], function() {
     });
 });
 Route::group(['domain' => 'microcosm.ogatism.com'], function() {
-    microcosm_route();
-}
-);
+    Route::get('/', function () {
+        return view('microcosm', ['title' => '占星術ソフト「microcosm」', 'pagetitle' => 'microcosm']);
+    });
+});
 Route::group(['domain' => 'microcosm.astrominit.com'], function() {
-    microcosm_route();
-}
-);
+    Route::get('/', function () {
+        return view('microcosm', ['title' => '占星術ソフト「microcosm」', 'pagetitle' => 'microcosm']);
+    });
+});
 
 Route::group(['domain' => 'tc.ogatism.com'], function(){
     Route::get('cheat', 'CheatController@index');
@@ -69,8 +71,3 @@ Route::group(['domain' => 'lc.astrominit.com'], function(){
     Auth::routes();
 });
 
-function microcosm_route() {
-    Route::get('/', function () {
-        return view('microcosm', ['title' => '占星術ソフト「microcosm」', 'pagetitle' => 'microcosm']);
-    });
-}
