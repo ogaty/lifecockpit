@@ -2,33 +2,72 @@
 <head>
     <meta charset="UTF-8">
     <title>{{{$title or  'microcosm'}}}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/microcosm.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
     <script type="text/javascript">
-$(document).ready( function () {
-    $('#compare').DataTable({
-        searching: false,
-        info: false,
-        ordering: false,
-        paging: false
-    });
-} );
+    $(document).ready( function () {
+        $('#compare').DataTable({
+            searching: false,
+            info: false,
+            ordering: false,
+            paging: false,
+            responsive: true
+        });
+
+        $('a[href^="#"]').click(function() {
+            var href= $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+	    $('body,html').animate({scrollTop:position}, 400, 'swing');
+	    return false;
+        });
+
+        var topBtn = $('#page-top');    
+        topBtn.hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                topBtn.fadeIn();
+            } else {
+                topBtn.fadeOut();
+            }
+        });
+        topBtn.click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);
+            return false;
+        });
+    } );
     </script>
 </head>
 <body>
-<div class="microcosm">
+<div class="microcosm" id="top">
+    <p id="page-top"><a href="#top">
+        <i class="fa fa-angle-up"></i>
+    </a></p>
     <h1>占星術ソフト microcosm</h1>
     <hr>
 
     <div class="section">
         <div class="section-inner">
-        microcosmは西洋占星術で使用されるホロスコープ作成支援ソフトです。<br>
-        最新のシステムで快適に動作することを目的として作成しました。
+            <div class="abstract">
+                microcosmは西洋占星術で使用されるホロスコープ作成支援ソフトです。<br>
+                最新のシステムで快適に動作することを目的として作成しました。
+                <div class="btn-wrap">
+                    <a class="btn" href="#dl">
+                    ダウンロード
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -45,7 +84,7 @@ $(document).ready( function () {
     <h2>特徴</h2>
         <div class="section-inner">
         <div class="feature pure-g">
-            <div class="item pure-u-1-3">
+            <div class="item pure-u-1 pure-u-md-1-3">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-desktop" aria-hidden="true"></i></span><br>
@@ -56,7 +95,7 @@ $(document).ready( function () {
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1-3">
+            <div class="item pure-u-1 pure-u-md-1-3">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-file-archive-o" aria-hidden="true"></i></span><br>
@@ -67,7 +106,7 @@ $(document).ready( function () {
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1-3">
+            <div class="item pure-u-1 pure-u-md-1-3">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-sliders" aria-hidden="true"></i></span><br>
@@ -78,7 +117,7 @@ $(document).ready( function () {
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1-3">
+            <div class="item pure-u-1 pure-u-md-1-3">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-sign-in" aria-hidden="true"></i></span><br>
@@ -89,7 +128,7 @@ $(document).ready( function () {
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1-3">
+            <div class="item pure-u-1 pure-u-md-1-3">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-cube" aria-hidden="true"></i></span><br>
@@ -100,7 +139,7 @@ $(document).ready( function () {
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1-3">
+            <div class="item pure-u-1 pure-u-md-1-3">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-id-card" aria-hidden="true"></i></span><br>
@@ -261,21 +300,21 @@ $(document).ready( function () {
         <div class="section-inner">
         <h3>オガティ</h3>
         <div class="info">
-             <div>
+             <p>
              Web業界に勤務するシステムエンジニア。個人としてもブロガー、電子書籍執筆など幅広く活動。<br>
              2014年より占星術師みけまゆみの元で本格的な占星術を学ぶ。<br>
              既存のホロスコープ作成ソフトが気に入らなかったため、独自の占星術ソフト「microcosm」の開発を始めるようになる。
-             </div>
-             <div>
+             </p>
+             <p>
              <a href="https://ogatism.jp/">ブログ「ogatism」</a><br>
              <a href="https://www.amazon.co.jp/%E7%B7%92%E5%BD%A2%E9%9B%84%E4%BA%8C/e/B00OBDISS8/">Amazon著者ページ</a><br>
              <a href="https://wowme.jp/gigs/2035">占い鑑定依頼はこちらまで</a><br>
-             </div>
+             </p>
         </div>
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="dl">
     <h2>ダウンロード</h2>
         <div class="section-inner">
         <div class="dl">
@@ -304,13 +343,27 @@ $(document).ready( function () {
             <dd>当ソフトはGPL v2ライセンスですので、使用に関する制限はありません。ご自由にお使いください。</dd>
             <dt class="faq">この機能が欲しい、この天体を表示させたい</dt>
             <dd>内容によっては今後のバージョンで検討するかもしれないので個別に相談いただければと思います。</dd>
-            <dt class="faq">Is there English version?</dt>
+            <dt class="faq">Is there an English version?</dt>
             <dd>No. But I want to support English language someday.</dd>
         </dl>
         </div>
     </div>
 
-    <div class="footer">
+    <div class="section">
+    <h2>ヘルプ</h2>
+        <div class="section-inner center">
+        作成中です。少々お待ちください。
+        </div>
+    </div>
+
+    <div class="section color2">
+    <h2>問い合わせ</h2>
+        <div class="section-inner center">
+        info◆ogatism.jp(@に変換)までお願いいたします。
+        </div>
+    </div>
+
+    <div class="footer color">
     <p>microcosm  (c) ogatism</p>
     </div>
 </div>
