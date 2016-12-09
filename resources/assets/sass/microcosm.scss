@@ -1,5 +1,7 @@
+$orange: #ef571b;
 body {
     line-height: 1.5;
+    color: #333333;
 }
 h1 {
     text-align: center;
@@ -13,6 +15,7 @@ h2 {
 }
 .abstract {
     text-align: center;
+    line-height: 3.5;
 }
 .btn-wrap {
     margin: 12px;
@@ -37,7 +40,7 @@ h2 {
     box-sizing: border-box;
 }
 .item-inner {
-    border: 2px solid #ef571b;
+    border: 2px solid $orange;
     padding: 8px;
     min-height: 12em;
 }
@@ -83,10 +86,10 @@ dt {
 }
 dt.lineup {
     margin-top: 4px;
-    border-bottom: 1px dotted #ef571b;
+    border-bottom: 1px dotted $orange;
 }
 .dl {
-    border: 2px solid #ef571b;
+    border: 2px solid $orange;
     padding: 12px;
     margin-bottom: 1em;
 }
@@ -97,7 +100,7 @@ dt.lineup {
     text-align: right;
 }
 .faq {
-    margin: 4px 0px;
+    margin: 8px 0px 4px;
 }
 .footer {
     padding: 15px 0px;
@@ -125,6 +128,13 @@ dt.lineup {
     background: #f05279;
     color: #fff;
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: 1px solid $orange;
+}
+table.dataTable.no-footer {
+    border-bottom: 1px solid $orange;
 }
 
 @media(min-width: 540px) {

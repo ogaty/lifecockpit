@@ -1,5 +1,6 @@
 body {
-  line-height: 1.5; }
+  line-height: 1.5;
+  color: #333333; }
 
 h1 {
   text-align: center;
@@ -10,7 +11,8 @@ h2 {
   margin: 0px 0px 15px; }
 
 .abstract {
-  text-align: center; }
+  text-align: center;
+  line-height: 3.5; }
 
 .btn-wrap {
   margin: 12px; }
@@ -96,7 +98,7 @@ dt.lineup {
   text-align: right; }
 
 .faq {
-  margin: 4px 0px; }
+  margin: 8px 0px 4px; }
 
 .footer {
   padding: 15px 0px;
@@ -125,6 +127,12 @@ dt.lineup {
   color: #fff;
   -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
   transition: background-color 0.3s ease-out, color 0.3s ease-out; }
+
+table.dataTable thead th, table.dataTable thead td {
+  border-bottom: 1px solid #ef571b; }
+
+table.dataTable.no-footer {
+  border-bottom: 1px solid #ef571b; }
 
 @media (min-width: 540px) {
   .section-inner {
