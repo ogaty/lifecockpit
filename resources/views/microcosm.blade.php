@@ -335,7 +335,7 @@
         <div class="dl">
             <h3>microcosm for Mac</h3>
             <div>対応OS: Mac OS X</div>
-            <div class="dl-link">開発中</div>
+            <div class="dl-link"><a href="https://geo.itunes.apple.com/jp/app/microcosm/id1182966687?mt=12"><img src="/img/Download_on_the_Mac_App_Store_Badge_JP_165x40.svg"></a></div>
         </div>
         </div>
     </div>
