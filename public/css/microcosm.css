@@ -96,6 +96,30 @@ h2 {
 .color2 {
   background: #f8f8f8; }
 
+.section.moon {
+  background: url(/img/moon.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  padding-top: 0px;
+  padding-bottom: 0px; }
+
+.section.planet {
+  background: url(/img/planet.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  padding-top: 0px;
+  padding-bottom: 0px; }
+
+.section.planet a {
+  color: #ccddff; }
+
+.section .overlay {
+  background: rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
+  padding-bottom: 30px; }
+
 .section-inner {
   width: 100%;
   margin: 0 auto; }
@@ -137,7 +161,9 @@ dt.lineup {
 
 .footer {
   padding: 15px 0px;
-  text-align: center; }
+  text-align: center;
+  background: #333333;
+  color: #fff; }
 
 #page-top {
   position: fixed;

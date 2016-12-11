@@ -194,18 +194,20 @@
         </div>
     </div>
 
-    <div class="section color2">
-    <h2>ラインナップ</h2>
-        <div class="section-inner">
-        <dl>
-        <dt class="lineup">microcosm lite</dt>
-        <dd>旧windowsでも動作可能なバージョンです。機能追加やサポートは最低限となります。</dd>
-        <dt class="lineup">microcosm</dt>
-        <dd>windows storeで配布されるwindows10用バージョンです。</dd>
-        <dt class="lineup">microcosm for Mac</dt>
-        <dd>Mac OSX用バージョンです。</dd>
-        </dl>
-        ライセンスはいずれもGPL v2となります。
+    <div class="section moon">
+        <div class="overlay">
+            <h2>ラインナップ</h2>
+            <div class="section-inner">
+                <dl>
+                    <dt class="lineup">microcosm lite</dt>
+                    <dd>旧windowsでも動作可能なバージョンです。機能追加やサポートは最低限となります。</dd>
+                    <dt class="lineup">microcosm</dt>
+                    <dd>windows storeで配布されるwindows10用バージョンです。</dd>
+                    <dt class="lineup">microcosm for Mac</dt>
+                    <dd>Mac OSX用バージョンです。</dd>
+                </dl>
+            ライセンスはいずれもGPL v2となります。
+            </div>
         </div>
     </div>
 
@@ -323,21 +325,23 @@
         </div>
     </div>
 
-    <div class="section color">
-        <h2>開発者</h2>
-        <div class="section-inner">
-            <h3>オガティ</h3>
-            <div class="info">
-                 <p>
-                 Web業界に勤務するシステムエンジニア。個人としてもブロガー、電子書籍執筆など幅広く活動。<br>
-                 2014年より占星術師みけまゆみの元で本格的な占星術を学ぶ。<br>
-                 既存のホロスコープ作成ソフトが気に入らなかったため、独自の占星術ソフト「microcosm」の開発を始めるようになる。
-                 </p>
-                 <p>
-                 <a href="https://ogatism.jp/">ブログ「ogatism」</a><br>
-                 <a href="https://www.amazon.co.jp/%E7%B7%92%E5%BD%A2%E9%9B%84%E4%BA%8C/e/B00OBDISS8/">Amazon著者ページ</a><br>
-                 <a href="https://wowme.jp/gigs/2035">占い鑑定依頼はこちらまで</a><br>
-                 </p>
+    <div class="section planet">
+        <div class="overlay">
+            <h2>開発者</h2>
+            <div class="section-inner">
+                <h3>オガティ</h3>
+                <div class="info">
+                     <p>
+                         Web業界に勤務するシステムエンジニア。個人としてもブロガー、電子書籍執筆など幅広く活動。<br>
+                         2014年より占星術師みけまゆみの元で本格的な占星術を学ぶ。<br>
+                         既存のホロスコープ作成ソフトが気に入らなかったため、独自の占星術ソフト「microcosm」の開発を始めるようになる。
+                     </p>
+                     <p>
+                         <a href="https://ogatism.jp/">ブログ「ogatism」</a><br>
+                         <a href="https://www.amazon.co.jp/%E7%B7%92%E5%BD%A2%E9%9B%84%E4%BA%8C/e/B00OBDISS8/">Amazon著者ページ</a><br>
+                         <a href="https://wowme.jp/gigs/2035">占い鑑定依頼はこちらまで</a><br>
+                     </p>
+                </div>
             </div>
         </div>
     </div>
@@ -347,16 +351,19 @@
         <div class="section-inner">
         <div class="dl">
             <h3>microcosm Lite</h3>
+            <div>バージョン: 0.3</div>
             <div>対応OS: windows7/windows8.1/windows10</div>
             <div class="dl-link"><a href="https://ogatism.jp/file/microcosm03.zip">ダウンロード</a></div>
         </div>
         <div class="dl">
             <h3>microcosm</h3>
+            <div>バージョン: -</div>
             <div>対応OS: Windows10</div>
             <div class="dl-link">開発中</div>
         </div>
         <div class="dl">
             <h3>microcosm for Mac</h3>
+            <div>バージョン: 1.0</div>
             <div>対応OS: Mac OS X</div>
             <div class="dl-link"><a href="https://geo.itunes.apple.com/jp/app/microcosm/id1182966687?mt=12"><img src="/img/Download_on_the_Mac_App_Store_Badge_JP_165x40.svg"></a></div>
         </div>
@@ -392,7 +399,8 @@
     </div>
 
     <div class="footer color">
-    <p>microcosm  (c) ogatism</p>
+        <div>西洋占星術師用ホロスコープ作成ソフト「microcosm」</div>
+        <div>  (c) yuji ogata / ogatism</div>
     </div>
 </div>
 </body>
