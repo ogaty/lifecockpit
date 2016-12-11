@@ -54,19 +54,25 @@
     <p id="page-top"><a href="#top">
         <i class="fa fa-angle-up"></i>
     </a></p>
-    <h1>占星術ソフト microcosm</h1>
-    <hr>
+    <div class="cover">
+        <div class="cover-inner">
+            <div class="cover-text">
+                <h1>覗いてみよう、君の宇宙を。</h1>
+                <span class="catchcopy">西洋占星術士用ホロスコープ作成ソフト「microcosm」</span>
+            </div>
+        </div>
+    </div>
 
     <div class="section">
         <div class="section-inner">
             <div class="abstract">
                 IT技術の進化により、<br>
-                占いの世界でもソフトウェアを使うのが当たり前となっています。<br>
-                しかし、この業界に関わるエンジニアの数は少なく、<br>
-                最新OSでの動作等不具合が見られたり、デザインに問題があるソフトも多々ありました。<br>
-                そういう理由で、今風のシステムを用いて、<br>
-                自分が使いやすいホロスコープ作成ソフトを作り上げようと決意しました。<br>
-                それが、このソフト「microcosm(マイクロコズム)」です。
+                占いの世界でもソフトウェアを使う事が<br class="sp">当たり前となっています。<br>
+                しかし、<br class="sp">この業界に関わるエンジニアの数は少なく、<br>
+                最新OSでの動作等不具合が見られたり、<br class="sp">デザインに問題があるソフトも多々ありました。<br>
+                そういう理由で、今風のシステムを用いて<br>
+                自分が使いやすいホロスコープ作成ソフトを<br class="sp">作り上げようと決意しました。<br>
+                それが、このソフト<br class="sp">「microcosm(マイクロコズム)」です。
                 <div class="btn-wrap">
                     <a class="btn" href="#dl">
                     ダウンロード
@@ -80,7 +86,7 @@
     <h2>お知らせ</h2>
         <div class="section-inner">
             <ul>
-                <li>2016/12/xx mac版 ver1.0 リリースしました！</li>
+                <li>2016/12/09 mac版 ver1.0 リリースしました！</li>
             </ul>
         </div>
     </div>
@@ -161,13 +167,30 @@
 
     <div class="section color">
     <h2>スクリーンショット</h2>
-        <div class="imgs">
-            <a href="/img/sample1.png">
-                <img src="/img/sample1-mini.png">
-            </a>
-            <a href="/img/sample2.png">
-                <img src="/img/sample2-mini.png">
-            </a>
+        <div class="section-inner">
+            <div class="imgs pure-g">
+                <div class="image-border pure-u-1 pure-u-md-1-3">
+                    <div class="image-border-inner">
+                        <a href="/img/sample1.png">
+                            <img src="/img/sample1-mini.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="image-border pure-u-1 pure-u-md-1-3">
+                    <div class="image-border-inner">
+                        <a href="/img/microcosm-mac.png">
+                            <img src="/img/microcosm-mac-mini.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="image-border pure-u-1 pure-u-md-1-3">
+                    <div class="image-border-inner">
+                        <a href="/img/sample2.png">
+                            <img src="/img/sample2-mini.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -303,19 +326,19 @@
     <div class="section color">
         <h2>開発者</h2>
         <div class="section-inner">
-        <h3>オガティ</h3>
-        <div class="info">
-             <p>
-             Web業界に勤務するシステムエンジニア。個人としてもブロガー、電子書籍執筆など幅広く活動。<br>
-             2014年より占星術師みけまゆみの元で本格的な占星術を学ぶ。<br>
-             既存のホロスコープ作成ソフトが気に入らなかったため、独自の占星術ソフト「microcosm」の開発を始めるようになる。
-             </p>
-             <p>
-             <a href="https://ogatism.jp/">ブログ「ogatism」</a><br>
-             <a href="https://www.amazon.co.jp/%E7%B7%92%E5%BD%A2%E9%9B%84%E4%BA%8C/e/B00OBDISS8/">Amazon著者ページ</a><br>
-             <a href="https://wowme.jp/gigs/2035">占い鑑定依頼はこちらまで</a><br>
-             </p>
-        </div>
+            <h3>オガティ</h3>
+            <div class="info">
+                 <p>
+                 Web業界に勤務するシステムエンジニア。個人としてもブロガー、電子書籍執筆など幅広く活動。<br>
+                 2014年より占星術師みけまゆみの元で本格的な占星術を学ぶ。<br>
+                 既存のホロスコープ作成ソフトが気に入らなかったため、独自の占星術ソフト「microcosm」の開発を始めるようになる。
+                 </p>
+                 <p>
+                 <a href="https://ogatism.jp/">ブログ「ogatism」</a><br>
+                 <a href="https://www.amazon.co.jp/%E7%B7%92%E5%BD%A2%E9%9B%84%E4%BA%8C/e/B00OBDISS8/">Amazon著者ページ</a><br>
+                 <a href="https://wowme.jp/gigs/2035">占い鑑定依頼はこちらまで</a><br>
+                 </p>
+            </div>
         </div>
     </div>
 
