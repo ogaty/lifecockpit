@@ -65,7 +65,7 @@
         <div class="cover-inner">
             <div class="cover-text">
                 <h1>覗いてみよう、君の宇宙を。</h1>
-                <span class="catchcopy">西洋占星術士用ホロスコープ作成ソフト「microcosm」</span>
+                <span class="catchcopy">西洋占星術師用ホロスコープ作成ソフト「microcosm」</span>
             </div>
         </div>
     </div>
