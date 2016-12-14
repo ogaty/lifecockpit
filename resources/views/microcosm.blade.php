@@ -3,6 +3,13 @@
     <meta charset="UTF-8">
     <title>{{{$title or  'microcosm'}}}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:title" content="{{{$title or  'microcosm'}}}" />
+    <meta property="og:url" content="http://microcosm.ogatism.com/" />
+    <meta property="og:image" content="http://microcosm.ogatism.com/img/microcosm_kv_mini.png" />
+    <meta property="og:description" content="西洋占星術師用ホロスコープ作成ソフト「microcosm」公式サイトです。" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{{$title or  'microcosm'}}}" />
+    <meta name="twitter:description" content="西洋占星術師用ホロスコープ作成ソフト「microcosm」公式サイトです。" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">

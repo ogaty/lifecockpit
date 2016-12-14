@@ -11,5 +11,6 @@
 </head>
 <body>
 @yield('body')
+<h1>ogatism.com</h1>
 </body>
 </html>
