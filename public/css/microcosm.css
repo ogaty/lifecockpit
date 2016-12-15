@@ -122,7 +122,9 @@ h2 {
 
 .section-inner {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box; }
 
 .image-border {
   padding: 5px;
