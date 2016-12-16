@@ -226,7 +226,7 @@
     <div class="section">
     <h2>機能比較</h2>
         <div class="section-inner">
-        <table id="compare" class="stripe">
+        <table id="compare" class="stripe" width="100%">
             <thead>
                 <tr>
                     <th></th>
