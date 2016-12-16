@@ -27,7 +27,7 @@
             info: false,
             ordering: false,
             paging: false,
-            responsive: true
+            scrollX: true
         });
 
         $('a[href^="#"]').click(function() {
@@ -66,6 +66,11 @@
             <div class="cover-text">
                 <h1>覗いてみよう、君の宇宙を。</h1>
                 <span class="catchcopy">西洋占星術師用ホロスコープ作成ソフト「microcosm」</span>
+                <div class="btn-wrap">
+                    <a class="btn" href="#dl">
+                    ダウンロード
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -221,7 +226,7 @@
     <div class="section">
     <h2>機能比較</h2>
         <div class="section-inner">
-        <table id="compare">
+        <table id="compare" class="stripe">
             <thead>
                 <tr>
                     <th></th>
