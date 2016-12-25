@@ -47,7 +47,8 @@ h2 {
     border: 2px solid #f05279;
     text-decoration: none;
     -webkit-transition: background-color 0.2s ease-out, color 0.2s ease-out;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out; }
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    font-weight: bold; }
   .btn-wrap .btn:hover {
     background: #f05279;
     color: #fff;

@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+Route::group(['domain' => 'microcosm.astrominit.com'], function() {
+    Route::get('/help/page/{current}', 'HelpController@page');
+    Route::get('/help/sidenav/{current}', 'HelpController@sidenav');
+});
+Route::group(['domain' => 'microcosm.ogatism.com'], function() {
+    Route::get('/help/index', function () {
+        return '{}';
+    });
+});
