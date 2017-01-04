@@ -13,6 +13,30 @@ h2 {
   font-style: italic;
   font-size: 1.7em; }
 
+.lightbox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding-top: 30px;
+  box-sizing: border-box; }
+  .lightbox img {
+    display: block;
+    margin: auto;
+    max-width: 90%; }
+  .lightbox .caption {
+    margin: 15px auto;
+    width: 50%;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #eee; }
+
 .cover {
   width: 100%;
   background: url(/img/microcosm_kv.jpg) no-repeat center;

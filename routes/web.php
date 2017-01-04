@@ -74,3 +74,13 @@ Route::group(['domain' => 'lc.astrominit.com'], function(){
     Auth::routes();
 });
 
+Route::group(['domain' => 'programming-miss60.ogatism.com'], function() {
+    Route::get('/', function () {
+        return view('book-landing', ['title' => '10年間のエンジニア人生でやらかした60のミス', 'pagetitle' => '10年間のエンジニア人生でやらかした60のミス']);
+    });
+});
+Route::group(['domain' => 'programming-miss60.astrominit.com'], function() {
+    Route::get('/', function () {
+        return view('book-landing', ['title' => '10年間のエンジニア人生でやらかした60のミス', 'pagetitle' => '10年間のエンジニア人生でやらかした60のミス']);
+    });
+});

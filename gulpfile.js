@@ -17,4 +17,5 @@ elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js');
     mix.sass('microcosm.scss');
+    mix.scripts('microcosm.js');
 });

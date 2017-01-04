@@ -20,6 +20,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="//cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="/js/microcosm.js"></script>
     <script type="text/javascript">
     $(document).ready( function () {
         $('#compare').DataTable({
@@ -58,6 +59,7 @@
 </head>
 <body>
 <div class="microcosm" id="top">
+    <div class="overlay"></div>
     <p id="page-top"><a href="#top">
         <i class="fa fa-angle-up"></i>
     </a></p>
@@ -98,6 +100,7 @@
     <h2>お知らせ</h2>
         <div class="section-inner">
             <ul>
+                <li>2017/01/04 microcosm-lite ver0.4.2 リリースしました！</li>
                 <li>2016/12/09 mac版 ver1.0 リリースしました！</li>
             </ul>
         </div>
@@ -183,23 +186,17 @@
             <div class="imgs pure-g">
                 <div class="image-border pure-u-1 pure-u-md-1-3">
                     <div class="image-border-inner">
-                        <a href="/img/sample1.png">
-                            <img src="/img/sample1-mini.png">
-                        </a>
+                            <img src="/img/sample1-mini.png" class="sampleimg">
                     </div>
                 </div>
                 <div class="image-border pure-u-1 pure-u-md-1-3">
                     <div class="image-border-inner">
-                        <a href="/img/microcosm-mac.png">
-                            <img src="/img/microcosm-mac-mini.png">
-                        </a>
+                            <img src="/img/microcosm-mac-mini.png" class="sampleimg">
                     </div>
                 </div>
                 <div class="image-border pure-u-1 pure-u-md-1-3">
                     <div class="image-border-inner">
-                        <a href="/img/sample2.png">
-                            <img src="/img/sample2-mini.png">
-                        </a>
+                            <img src="/img/sample2-mini.png" class="sampleimg">
                     </div>
                 </div>
             </div>
@@ -364,11 +361,11 @@
         <div class="section-inner">
         <div class="dl">
             <h3>microcosm Lite</h3>
-            <div>バージョン: 0.4</div>
+            <div>バージョン: 0.4.2</div>
             <div>対応OS: windows7/windows8.1/windows10</div>
             <div>※起動には.net Framework 4.5以上が必要です</div>
             <div class="dl-link">
-                <a href="https://ogatism.jp/file/microcosm04.zip">ダウンロード</a><br>
+                <a href="https://ogatism.jp/file/microcosm042.zip">ダウンロード</a><br>
                 <a href="https://www.microsoft.com/ja-JP/download/details.aspx?id=42643" target="_blank">.net Frameworkをダウンロードする</a>
             </div>
         </div>
