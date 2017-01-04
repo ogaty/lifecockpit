@@ -408,7 +408,8 @@
     <div class="section color2">
     <h2>問い合わせ</h2>
         <div class="section-inner center">
-        info◆ogatism.jp(@に変換)までお願いいたします。
+        当ソフトはまだ開発中の部分が多いため、バグも多数潜んでいると思われます。<br>
+        不明点がございましたら、info◆ogatism.jp(@に変換)までお願いいたします。
         </div>
     </div>
 
