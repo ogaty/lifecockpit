@@ -21,12 +21,15 @@ Route::group(['domain' => 'microcosm.ogatism.com'], function() {
         return view('microcosm', ['title' => '西洋占星術師用ホロスコープ作成ソフト「microcosm」', 'pagetitle' => 'microcosm']);
     });
     Route::get('help', 'HelpController@index');
+    Route::get('help/install', 'HelpController@install');
+    Route::get('help/{category_id}', 'HelpController@index');
 });
 Route::group(['domain' => 'microcosm.astrominit.com'], function() {
     Route::get('/', function () {
         return view('microcosm', ['title' => '西洋占星術師用ホロスコープ作成ソフト「microcosm」', 'pagetitle' => 'microcosm']);
     });
     Route::get('help', 'HelpController@index');
+    Route::get('help/install', 'HelpController@install');
     Route::get('help/{category_id}', 'HelpController@index');
 });
 

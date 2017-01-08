@@ -9,7 +9,11 @@ class HelpController extends Controller
 {
     //
     public function index($category_id = 1) {
-        return view('help', ['category_id' => $category_id]);
+        return view('mchelp/index', ['category_id' => $category_id]);
+    }
+
+    public function install() {
+        return view('mchelp/install', ['category_id' => 2]);
     }
 
     public function page($current) {
