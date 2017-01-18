@@ -24,8 +24,9 @@
                 <a class="pure-menu-heading" href="{{ url('/') }}">microcosm</a>
 
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ url('/help/') }}">トップ</a></li>
-                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ url('/help/install/') }}">インストール</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('help') }}">トップ</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('version') }}">バージョン</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('install') }}">インストール</a></li>
                 </ul>
             </div>
         </div>

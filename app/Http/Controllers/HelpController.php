@@ -9,6 +9,14 @@ class HelpController extends Controller
 {
     //
     public function index($category_id = 1) {
+        switch ($category_id) {
+        case 1:
+            return view('mchelp/index', ['category_id' => $category_id]);
+            break;
+        case 2:
+            return view('mchelp/install', ['category_id' => $category_id]);
+            break;
+        }
         return view('mchelp/index', ['category_id' => $category_id]);
     }
 

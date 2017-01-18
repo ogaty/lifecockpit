@@ -20,16 +20,25 @@ Route::group(['domain' => 'microcosm.ogatism.com'], function() {
     Route::get('/', function () {
         return view('microcosm', ['title' => '西洋占星術師用ホロスコープ作成ソフト「microcosm」', 'pagetitle' => 'microcosm']);
     });
-    Route::get('help', 'HelpController@index');
-    Route::get('help/install', 'HelpController@install');
+    Route::get('help/version', ['as' => 'version', function() {
+        return view('mchelp/version');
+    }]);
+    Route::get('help/install', ['as' => 'install', function() {
+        return view('mchelp/install');
+    }]);
     Route::get('help/{category_id}', 'HelpController@index');
 });
 Route::group(['domain' => 'microcosm.astrominit.com'], function() {
     Route::get('/', function () {
         return view('microcosm', ['title' => '西洋占星術師用ホロスコープ作成ソフト「microcosm」', 'pagetitle' => 'microcosm']);
     });
-    Route::get('help', 'HelpController@index');
-    Route::get('help/install', 'HelpController@install');
+    Route::get('help', ['as' => 'help', 'uses' => 'HelpController@index']);
+    Route::get('help/version', ['as' => 'version', function() {
+        return view('mchelp/version');
+    }]);
+    Route::get('help/install', ['as' => 'install', function() {
+        return view('mchelp/install');
+    }]);
     Route::get('help/{category_id}', 'HelpController@index');
 });
 

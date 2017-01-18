@@ -100,8 +100,9 @@
     <h2>お知らせ</h2>
         <div class="section-inner">
             <ul>
+                <li>2017/01/17 microcosm-mac ver1.0.1 リリースしました！</li>
                 <li>2017/01/04 microcosm-lite ver0.4.2 リリースしました！</li>
-                <li>2016/12/09 mac版 ver1.0 リリースしました！</li>
+                <li>2016/12/09 microcosm-mac ver1.0 リリースしました！</li>
             </ul>
         </div>
     </div>
