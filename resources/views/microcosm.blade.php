@@ -402,7 +402,7 @@
     <div class="section">
     <h2>ヘルプ</h2>
         <div class="section-inner center">
-        作成中です。少々お待ちください。
+            <a href="http://microcosm.ogatism.com/help/">ヘルプはこちら(まだ作成中ですが)</a>
         </div>
     </div>
 

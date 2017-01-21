@@ -11,17 +11,13 @@ class HelpController extends Controller
     public function index($category_id = 1) {
         switch ($category_id) {
         case 1:
-            return view('mchelp/index', ['category_id' => $category_id]);
+            return view('mchelp/index', ['astro' => $this->astro(), 'category_id' => $category_id]);
             break;
         case 2:
-            return view('mchelp/install', ['category_id' => $category_id]);
+            return view('mchelp/install', ['astro' => $this->astro(), 'category_id' => $category_id]);
             break;
         }
-        return view('mchelp/index', ['category_id' => $category_id]);
-    }
-
-    public function install() {
-        return view('mchelp/install', ['category_id' => 2]);
+        return view('mchelp/index', ['astro' => $this->astro(), 'category_id' => $category_id]);
     }
 
     public function page($current) {
@@ -42,5 +38,12 @@ class HelpController extends Controller
             }
         }
         return response()->json(['categoryList' => $categories2]);
+    }
+
+    private function astro() {
+        if ($_SERVER['HTTP_HOST'] == 'microcosm.astrominit.com') {
+            return true;
+        }
+        return false;
     }
 }

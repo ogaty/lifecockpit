@@ -20,11 +20,18 @@ Route::group(['domain' => 'microcosm.ogatism.com'], function() {
     Route::get('/', function () {
         return view('microcosm', ['title' => '西洋占星術師用ホロスコープ作成ソフト「microcosm」', 'pagetitle' => 'microcosm']);
     });
+    Route::get('help', ['as' => 'help', 'uses' => 'HelpController@index']);
     Route::get('help/version', ['as' => 'version', function() {
         return view('mchelp/version');
     }]);
     Route::get('help/install', ['as' => 'install', function() {
         return view('mchelp/install');
+    }]);
+    Route::get('help/launch', ['as' => 'launch', function() {
+        return view('mchelp/launch');
+    }]);
+    Route::get('help/database', ['as' => 'database', function() {
+        return view('mchelp/database');
     }]);
     Route::get('help/{category_id}', 'HelpController@index');
 });
@@ -32,12 +39,18 @@ Route::group(['domain' => 'microcosm.astrominit.com'], function() {
     Route::get('/', function () {
         return view('microcosm', ['title' => '西洋占星術師用ホロスコープ作成ソフト「microcosm」', 'pagetitle' => 'microcosm']);
     });
-    Route::get('help', ['as' => 'help', 'uses' => 'HelpController@index']);
-    Route::get('help/version', ['as' => 'version', function() {
-        return view('mchelp/version');
+    Route::get('help', ['as' => 'devhelp', 'uses' => 'HelpController@index']);
+    Route::get('help/version', ['as' => 'devversion', function() {
+        return view('mchelp/version', ['astro' => true]);
     }]);
-    Route::get('help/install', ['as' => 'install', function() {
-        return view('mchelp/install');
+    Route::get('help/install', ['as' => 'devinstall', function() {
+        return view('mchelp/install', ['astro' => true]);
+    }]);
+    Route::get('help/launch', ['as' => 'devlaunch', function() {
+        return view('mchelp/launch', ['astro' => true]);
+    }]);
+    Route::get('help/database', ['as' => 'devdatabase', function() {
+        return view('mchelp/database', ['astro' => true]);
     }]);
     Route::get('help/{category_id}', 'HelpController@index');
 });

@@ -24,9 +24,19 @@
                 <a class="pure-menu-heading" href="{{ url('/') }}">microcosm</a>
 
                 <ul class="pure-menu-list">
+@if ($astro)
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('devhelp') }}">トップ</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('devversion') }}">バージョン</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('devinstall') }}">インストール</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('devlaunch') }}">チャート</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('devdatabase') }}">データベース</a></li>
+@else
                     <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('help') }}">トップ</a></li>
                     <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('version') }}">バージョン</a></li>
                     <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('install') }}">インストール</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('launch') }}">チャート</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="{{ route('database') }}">データベース</a></li>
+@endif
                 </ul>
             </div>
         </div>
