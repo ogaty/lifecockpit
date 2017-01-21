@@ -22,16 +22,16 @@ Route::group(['domain' => 'microcosm.ogatism.com'], function() {
     });
     Route::get('help', ['as' => 'help', 'uses' => 'HelpController@index']);
     Route::get('help/version', ['as' => 'version', function() {
-        return view('mchelp/version', 'astro' => false);
+        return view('mchelp/version', ['astro' => false]);
     }]);
     Route::get('help/install', ['as' => 'install', function() {
-        return view('mchelp/install', 'astro' => false);
+        return view('mchelp/install', ['astro' => false]);
     }]);
     Route::get('help/launch', ['as' => 'launch', function() {
-        return view('mchelp/launch', 'astro' => false);
+        return view('mchelp/launch', ['astro' => false]);
     }]);
     Route::get('help/database', ['as' => 'database', function() {
-        return view('mchelp/database', 'astro' => false);
+        return view('mchelp/database', ['astro' => false]);
     }]);
     Route::get('help/{category_id}', 'HelpController@index');
 });
