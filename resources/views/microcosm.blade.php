@@ -84,7 +84,7 @@
                 占いの世界でもソフトウェアを使う事が<br class="sp">当たり前となっています。<br>
                 しかし、<br class="sp">この業界に関わるエンジニアの数は少なく、<br>
                 最新OSでの動作等不具合が見られたり、<br class="sp">デザインに問題があるソフトも多々ありました。<br>
-                そういう理由で、今風のシステムを用いて<br>
+                そういう経緯から、今風のシステムを用いて<br>
                 自分が使いやすいホロスコープ作成ソフトを<br class="sp">作ってみることにしました。<br>
                 それが、このソフト<br class="sp">「microcosm(マイクロコズム)」です。
                 <div class="btn-wrap">
@@ -100,6 +100,7 @@
     <h2>お知らせ</h2>
         <div class="section-inner">
             <ul>
+                <li>2017/01/23 microcosm-lite ver0.5 リリースしました！</li>
                 <li>2017/01/17 microcosm-mac ver1.0.1 リリースしました！</li>
                 <li>2017/01/04 microcosm-lite ver0.4.2 リリースしました！</li>
                 <li>2016/12/09 microcosm-mac ver1.0 リリースしました！</li>
