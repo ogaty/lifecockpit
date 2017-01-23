@@ -5,6 +5,7 @@
 @stop
 
 @section('h2')
+ヘルプ
 @stop
 
 @section('body')

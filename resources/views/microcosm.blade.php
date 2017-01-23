@@ -362,11 +362,11 @@
         <div class="section-inner">
         <div class="dl">
             <h3>microcosm Lite</h3>
-            <div>バージョン: 0.4.2</div>
+            <div>バージョン: 0.5</div>
             <div>対応OS: windows7/windows8.1/windows10</div>
             <div>※起動には.net Framework 4.5以上が必要です</div>
             <div class="dl-link">
-                <a href="https://ogatism.jp/file/microcosm042.zip">ダウンロード</a><br>
+                <a href="https://ogatism.jp/file/microcosm05.zip">ダウンロード</a><br>
                 <a href="https://www.microsoft.com/ja-JP/download/details.aspx?id=42643" target="_blank">.net Frameworkをダウンロードする</a>
             </div>
         </div>
