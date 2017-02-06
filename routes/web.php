@@ -89,12 +89,14 @@ Route::group(['domain' => 'tc.astrominit.com'], function(){
 
 Route::group(['domain' => 'lc.ogatism.com'], function(){
     Route::get('home', 'HomeController@index');
+    Route::get('diary', ['as' => 'diary', 'uses' => 'HomeController@diary']);
     Route::get('/', 'HomeController@index');
     Auth::routes();
 });
 
 Route::group(['domain' => 'lc.astrominit.com'], function(){
     Route::get('home', 'HomeController@index');
+    Route::get('diary', ['as' => 'diary', 'uses' => 'HomeController@diary']);
     Route::get('/', 'HomeController@index');
     Auth::routes();
 });

@@ -33,6 +33,9 @@
                     @foreach ($categories as $category)
                     <li class="pure-menu-item"><a href="{{ url('/category/' . $category->id) }}" class="pure-menu-link">{{ $category->jpname }}</a></li>
                     @endforeach
+                    <li class="pure-menu-item">
+                        <a href="{{ route('diary') }}" class="pure-menu-link">Diary.txt</a>
+                    </li>
                     @endif
                     <li class="pure-menu-item">
                         <a href="{{ url('/logout') }}" class="pure-menu-link"

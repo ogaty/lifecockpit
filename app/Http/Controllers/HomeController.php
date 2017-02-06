@@ -32,4 +32,14 @@ class HomeController extends Controller
             'categories' => $sideinfo['categories']
         ]);
     }
+
+    public function diary()
+    {
+        $diaries = [];
+        return view('diary', [
+            'title' => config('app.name', 'LifeCockpit'),
+            'pagetitle' => 'Diary',
+            'diaries' => $diaries
+        ]);
+    }
 }
