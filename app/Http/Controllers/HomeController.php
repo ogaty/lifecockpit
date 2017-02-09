@@ -43,4 +43,16 @@ class HomeController extends Controller
             'diaries' => $diaries
         ]);
     }
+
+    public function show_diary($txt)
+    {
+        $diary = File::get('/home/tea/diary/' . $txt);
+        $diary = str_replace("\n", '<br>', $diary);
+        return view('show_diary', [
+            'title' => config('app.name', 'LifeCockpit'),
+            'pagetitle' => 'Diary',
+            'file' => $txt,
+            'txt' => $diary
+        ]);
+    }
 }
