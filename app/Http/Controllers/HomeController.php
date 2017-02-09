@@ -33,6 +33,11 @@ class HomeController extends Controller
 
     public function diary()
     {
+        if ($_SERVER['SERVER_NAME'] == 'lc.astrominit.com') {
+            $astro = true;
+        } else {
+            $astro = false;
+        }
         $diaries = File::files('/home/tea/diary');
         $diaries = array_map(function($key) {
             return basename($key);
@@ -40,19 +45,26 @@ class HomeController extends Controller
         return view('diary', [
             'title' => config('app.name', 'LifeCockpit'),
             'pagetitle' => 'Diary',
-            'diaries' => $diaries
+            'diaries' => $diaries,
+            'astro' => $astro
         ]);
     }
 
     public function show_diary($txt)
     {
+        if ($_SERVER['SERVER_NAME'] == 'lc.astrominit.com') {
+            $astro = true;
+        } else {
+            $astro = false;
+        }
         $diary = File::get('/home/tea/diary/' . $txt);
         $diary = str_replace("\n", '<br>', $diary);
         return view('show_diary', [
             'title' => config('app.name', 'LifeCockpit'),
             'pagetitle' => 'Diary',
             'file' => $txt,
-            'txt' => $diary
+            'txt' => $diary,
+            'astro' => $astro
         ]);
     }
 }

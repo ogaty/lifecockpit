@@ -9,7 +9,11 @@
 
                 <div class="panel-body">
                 @foreach ($diaries as $diary)
-                    <a href="{{ route('devdiary') }}/{{ $diary }}">{{ $diary }}</a><br>
+                    @if ($astro)
+                        <a href="{{ route('devdiary') }}/{{ $diary }}">{{ $diary }}</a><br>
+                    @else
+                        <a href="{{ route('diary') }}/{{ $diary }}">{{ $diary }}</a><br>
+                    @endif
                 @endforeach
                 </div>
             </div>

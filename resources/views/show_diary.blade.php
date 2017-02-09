@@ -10,7 +10,11 @@
                 <div class="panel-body">
                 {!! $txt !!}
                 </div>
+                @if ($astro)
                 <a href="{{ route('devdiary') }}">戻る</a>
+                @else
+                <a href="{{ route('diary') }}">戻る</a>
+                @endif
             </div>
         </div>
     </div>
