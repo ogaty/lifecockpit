@@ -29,10 +29,6 @@
                         <li class="pure-menu-item"><a href="{{ url('/login') }}" class="pure-menu-link">Login</a></li>
                         <li class="pure-menu-item"><a href="{{ url('/register') }}" class="pure-menu-link">Register</a></li>
                     @else
-                    @if (isset($categories))
-                    @foreach ($categories as $category)
-                    <li class="pure-menu-item"><a href="{{ url('/category/' . $category->id) }}" class="pure-menu-link">{{ $category->jpname }}</a></li>
-                    @endforeach
                     <li class="pure-menu-item">
                         <a href="{{ route('diary') }}" class="pure-menu-link">Diary.txt</a>
                     </li>

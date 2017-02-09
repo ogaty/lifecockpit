@@ -24,11 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $sideinfo = \App\Http\Controllers\SidenavController::sidenav();
         return view('home', [
             'title' => config('app.name', 'LifeCockpit'),
             'pagetitle' => 'Home',
-            'categories' => $sideinfo['categories']
+            'categories' => []
         ]);
     }
 
