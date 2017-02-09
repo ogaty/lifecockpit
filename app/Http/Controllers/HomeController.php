@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\SidenavController;
-use Carbon\Carbon;
+use File;
 
 class HomeController extends Controller
 {
@@ -35,7 +34,10 @@ class HomeController extends Controller
 
     public function diary()
     {
-        $diaries = [];
+        $diaries = File::files('/home/tea/diary');
+        $diaries = array_map(function($key) {
+            return basename($key);
+        }, $diaries);
         return view('diary', [
             'title' => config('app.name', 'LifeCockpit'),
             'pagetitle' => 'Diary',
