@@ -24,10 +24,16 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if ($_SERVER['SERVER_NAME'] == 'lc.astrominit.com') {
+            $astro = true;
+        } else {
+            $astro = false;
+        }
         return view('home', [
             'title' => config('app.name', 'LifeCockpit'),
             'pagetitle' => 'Home',
-            'categories' => []
+            'categories' => [],
+            'astro' => $astro
         ]);
     }
 

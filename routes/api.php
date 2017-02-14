@@ -25,3 +25,12 @@ Route::group(['domain' => 'microcosm.ogatism.com'], function() {
         return '{}';
     });
 });
+Route::group(['domain' => 'lc.astrominit.com'], function() {
+    Route::post('/newmemo', function () {
+        if (file_exists('/home/tea/diary/memo.txt')) {
+            rename("/home/tea/diary/memo.txt", "/home/tea/diary/memo" . date('Ymd') . ".txt");
+            touch('/home/tea/diary/memo.txt');
+        }
+        return '{"result":"OK"}';
+    });
+});

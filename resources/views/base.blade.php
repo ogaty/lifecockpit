@@ -29,9 +29,15 @@
                         <li class="pure-menu-item"><a href="{{ url('/login') }}" class="pure-menu-link">Login</a></li>
                         <li class="pure-menu-item"><a href="{{ url('/register') }}" class="pure-menu-link">Register</a></li>
                     @else
-                    <li class="pure-menu-item">
-                        <a href="{{ route('diary') }}" class="pure-menu-link">Diary.txt</a>
-                    </li>
+                        @if ($astro)
+                        <li class="pure-menu-item">
+                            <a href="{{ route('devdiary') }}" class="pure-menu-link">Diary.txt</a>
+                        </li>
+                        @else
+                        <li class="pure-menu-item">
+                            <a href="{{ route('diary') }}" class="pure-menu-link">Diary.txt</a>
+                        </li>
+                        @endif
                     @endif
                     <li class="pure-menu-item">
                         <a href="{{ url('/logout') }}" class="pure-menu-link"
