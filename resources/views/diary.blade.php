@@ -11,13 +11,19 @@
                     <div>
                         <button onclick="newmemo()">newmemo</button>
                     </div>
-                    @foreach ($diaries as $diary)
-                        @if ($astro)
-                            <a href="{{ route('devdiary') }}/{{ $diary }}">{{ $diary }}</a><br>
-                        @else
-                            <a href="{{ route('diary') }}/{{ $diary }}">{{ $diary }}</a><br>
+                    @for ($i = 0 + $begin; $i < 30 + $begin; $i++)
+                        @if (count($diaries) > $i)
+                            @if ($astro)
+                                <a href="{{ route('devdiary') }}/show/{{ $diaries[$i] }}">{{ $diaries[$i] }}</a><br>
+                            @else
+                                <a href="{{ route('diary') }}/show/{{ $diaries[$i] }}">{{ $diaries[$i] }}</a><br>
+                            @endif
                         @endif
-                    @endforeach
+                    @endfor
+                    <div>
+                        <button onclick="prevmemo()">prev</button>
+                        <button onclick="nextmemo()">next</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,6 +37,16 @@ function newmemo() {
             location.reload();
         }
     });
+}
+function nextmemo() {
+    location.href = '{{ route('devdiary') }}/{{ 30 + $begin }}';
+}
+function prevmemo() {
+@if ($begin > 30)
+    location.href = '{{ route('devdiary') }}/{{ $begin - 30 }}';
+@else
+    location.href = '{{ route('devdiary') }}/';
+@endif
 }
 </script>
 @endsection

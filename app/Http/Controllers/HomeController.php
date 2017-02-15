@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use File;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -37,7 +38,7 @@ class HomeController extends Controller
         ]);
     }
 
-    public function diary()
+    public function diary($begin = 0)
     {
         if ($_SERVER['SERVER_NAME'] == 'lc.astrominit.com') {
             $astro = true;
@@ -52,7 +53,8 @@ class HomeController extends Controller
             'title' => config('app.name', 'LifeCockpit'),
             'pagetitle' => 'Diary',
             'diaries' => $diaries,
-            'astro' => $astro
+            'begin' => $begin,
+            'astro' => $astro,
         ]);
     }
 

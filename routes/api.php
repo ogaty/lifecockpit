@@ -33,4 +33,12 @@ Route::group(['domain' => 'lc.astrominit.com'], function() {
         }
         return '{"result":"OK"}';
     });
+    Route::post('/upmemo', function () {
+        if (file_exists('/home/tea/diary/memo.txt')) {
+            $fp = fopen('/home/tea/diary/memo.txt');
+            fputs($_POST['txt']);
+            fclose($fp);
+        }
+        return '{"result":"OK"}';
+    });
 });
