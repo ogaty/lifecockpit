@@ -10,8 +10,6 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{{{$title or  'microcosm'}}}" />
     <meta name="twitter:description" content="西洋占星術師用ホロスコープ作成ソフト「microcosm」公式サイトです。" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -111,8 +109,8 @@
     <div class="section">
     <h2>特徴</h2>
         <div class="section-inner">
-        <div class="feature pure-g">
-            <div class="item pure-u-1 pure-u-md-1-3">
+        <div class="feature">
+            <div class="item column">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-desktop" aria-hidden="true"></i></span><br>
@@ -123,7 +121,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1 pure-u-md-1-3">
+            <div class="item column">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-file-archive-o" aria-hidden="true"></i></span><br>
@@ -134,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1 pure-u-md-1-3">
+            <div class="item column">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-sliders" aria-hidden="true"></i></span><br>
@@ -145,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1 pure-u-md-1-3">
+            <div class="item column">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-sign-in" aria-hidden="true"></i></span><br>
@@ -156,7 +154,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1 pure-u-md-1-3">
+            <div class="item column">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-cube" aria-hidden="true"></i></span><br>
@@ -167,7 +165,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item pure-u-1 pure-u-md-1-3">
+            <div class="item column">
                 <div class="item-inner">
                     <div class="head">
                         <span class="icon"><i class="fa fa-id-card" aria-hidden="true"></i></span><br>
@@ -185,18 +183,18 @@
     <div class="section color">
     <h2>スクリーンショット</h2>
         <div class="section-inner">
-            <div class="imgs pure-g">
-                <div class="image-border pure-u-1 pure-u-md-1-3">
+            <div class="imgs">
+                <div class="image-border">
                     <div class="image-border-inner">
                             <img src="/img/sample1-mini.png" class="sampleimg">
                     </div>
                 </div>
-                <div class="image-border pure-u-1 pure-u-md-1-3">
+                <div class="image-border">
                     <div class="image-border-inner">
                             <img src="/img/microcosm-mac-mini.png" class="sampleimg">
                     </div>
                 </div>
-                <div class="image-border pure-u-1 pure-u-md-1-3">
+                <div class="image-border">
                     <div class="image-border-inner">
                             <img src="/img/sample2-mini.png" class="sampleimg">
                     </div>
@@ -345,7 +343,7 @@
                      <p>
                          Web業界に勤務するシステムエンジニア。個人としてもブロガー、電子書籍執筆など幅広く活動。<br>
                          2014年より占星術師みけまゆみの元で本格的な占星術を学び、占星術師としての活動を開始。<br>
-                         理系男性エンジニア＋占星術という珍しさが注目を集める。<br>
+                         理系男性エンジニア＋占星術という珍しさにより、じわじわと注目を集める。<br>
                          既存のホロスコープ作成ソフトが気に入らなかったため、2015年末から独自の占星術ソフト「microcosm」の開発プロジェクトを開始する事を決意。
                      </p>
                      <p>

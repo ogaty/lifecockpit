@@ -20,6 +20,9 @@
                             @endif
                         @endif
                     @endfor
+                    <ul data-bind="foreach: diaries">
+                        <li><a data-bind="text: name, attr: {href: link}"></a></li>
+                    </ul>
                     <div>
                         <button onclick="prevmemo()">prev</button>
                         <button onclick="nextmemo()">next</button>
@@ -30,6 +33,12 @@
     </div>
 </div>
 <script type="text/javascript">
+var diaryViewModel = {
+    diaries: ko.observableArray()
+};
+
+ko.applyBindings(diaryViewModel);
+
 function newmemo() {
     $.post({
         'url' : 'http://lc.astrominit.com/api/newmemo',
@@ -39,7 +48,9 @@ function newmemo() {
     });
 }
 function nextmemo() {
-    location.href = '{{ route('devdiary') }}/{{ 30 + $begin }}';
+diaryViewModel.diaries([{name: 'bbbb', link: 'http://aaa.bbb/' }]);
+
+//    location.href = '{{ route('devdiary') }}/{{ 30 + $begin }}';
 }
 function prevmemo() {
 @if ($begin > 30)

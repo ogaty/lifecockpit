@@ -79,6 +79,17 @@ h2 {
     -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
     transition: background-color 0.3s ease-out, color 0.3s ease-out; }
 
+.feature {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap; }
+  .feature .item {
+    width: 100%; }
+
+@media screen and (min-width: 64em) {
+  .feature .item {
+    width: 33.3333%; } }
+
 .item {
   padding: 12px;
   box-sizing: border-box; }
@@ -96,10 +107,6 @@ h2 {
 .icon {
   font-size: 3em;
   color: #f05279; }
-
-.imgs {
-  width: 100%;
-  text-align: center; }
 
 .center {
   text-align: center; }
@@ -144,18 +151,27 @@ h2 {
   padding: 0 10px;
   box-sizing: border-box; }
 
-.image-border {
-  padding: 5px;
-  box-sizing: border-box; }
-
-.image-border-inner {
-  border: 3px solid #ccc;
-  min-height: 170px;
-  padding-top: 15px; }
-
-.image-border img {
+.imgs {
   width: 100%;
-  max-width: 200px; }
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap; }
+  .imgs .image-border {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box; }
+  .imgs .image-border-inner {
+    border: 3px solid #ccc;
+    min-height: 170px;
+    padding-top: 15px; }
+  .imgs .image-border img {
+    width: 100%;
+    max-width: 200px; }
+
+@media screen and (min-width: 64em) {
+  .imgs .image-border {
+    width: 33.3333%; } }
 
 dt {
   font-weight: bold; }
