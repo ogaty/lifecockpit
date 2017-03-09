@@ -14,6 +14,6 @@ class BusinessController extends Controller
 
     //
     public function index() {
-        return $view('business/index', ['title' => 'business', 'pagetitle' => 'Business']);
+        return view('business/index', ['title' => 'business', 'pagetitle' => 'Business']);
     }
 }
