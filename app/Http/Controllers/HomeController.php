@@ -5,16 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use File;
 use Carbon\Carbon;
+use App\Repositories\BlueRepository;
 
 class HomeController extends Controller
 {
+    public $blue;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(BlueRepository $blue)
     {
+        $this->blue = $blue;
         $this->middleware('auth');
     }
 
@@ -49,7 +52,7 @@ class HomeController extends Controller
         $diaries = array_map(function($key) {
             return basename($key);
         }, $diaries);
-        return view('diary', [
+        return view('diary/index', [
             'title' => config('app.name', 'LifeCockpit'),
             'pagetitle' => 'Diary',
             'diaries' => $diaries,
@@ -67,12 +70,20 @@ class HomeController extends Controller
         }
         $diary = File::get('/home/tea/diary/' . $txt);
         $diary = str_replace("\n", '<br>', $diary);
-        return view('show_diary', [
+        return view('diary/show', [
             'title' => config('app.name', 'LifeCockpit'),
             'pagetitle' => 'Diary',
             'file' => $txt,
             'txt' => $diary,
             'astro' => $astro
+        ]);
+    }
+
+    public function note()
+    {
+        return view('note/index', [
+            'title' => config('app.name', 'LifeCockpit'),
+            'pagetitle' => 'Note',
         ]);
     }
 }

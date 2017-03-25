@@ -16,44 +16,6 @@ Route::group(['domain' => 'ogatism.com'], function() {
         return view('ogatism', ['title' => 'ogatism.com', 'pagetitle' => 'ogatism.com']);
     });
 });
-Route::group(['domain' => 'microcosm.ogatism.com'], function() {
-    Route::get('/', function () {
-        return view('microcosm', ['title' => '西洋占星術師用ホロスコープ作成ソフト「microcosm」', 'pagetitle' => 'microcosm']);
-    });
-    Route::get('help', ['as' => 'help', 'uses' => 'HelpController@index']);
-    Route::get('help/version', ['as' => 'version', function() {
-        return view('mchelp/version', ['astro' => false]);
-    }]);
-    Route::get('help/install', ['as' => 'install', function() {
-        return view('mchelp/install', ['astro' => false]);
-    }]);
-    Route::get('help/launch', ['as' => 'launch', function() {
-        return view('mchelp/launch', ['astro' => false]);
-    }]);
-    Route::get('help/database', ['as' => 'database', function() {
-        return view('mchelp/database', ['astro' => false]);
-    }]);
-    Route::get('help/{category_id}', 'HelpController@index');
-});
-Route::group(['domain' => 'microcosm.astrominit.com'], function() {
-    Route::get('/', function () {
-        return view('microcosm', ['title' => '西洋占星術師用ホロスコープ作成ソフト「microcosm」', 'pagetitle' => 'microcosm']);
-    });
-    Route::get('help', ['as' => 'devhelp', 'uses' => 'HelpController@index']);
-    Route::get('help/version', ['as' => 'devversion', function() {
-        return view('mchelp/version', ['astro' => true]);
-    }]);
-    Route::get('help/install', ['as' => 'devinstall', function() {
-        return view('mchelp/install', ['astro' => true]);
-    }]);
-    Route::get('help/launch', ['as' => 'devlaunch', function() {
-        return view('mchelp/launch', ['astro' => true]);
-    }]);
-    Route::get('help/database', ['as' => 'devdatabase', function() {
-        return view('mchelp/database', ['astro' => true]);
-    }]);
-    Route::get('help/{category_id}', 'HelpController@index');
-});
 
 Route::group(['domain' => 'tc.ogatism.com'], function(){
     Route::get('cheat', 'CheatController@index');
@@ -92,6 +54,7 @@ Route::group(['domain' => 'lc.ogatism.com'], function(){
     Route::get('diary', ['as' => 'diary', 'uses' => 'HomeController@diary']);
     Route::get('diary/{begin}', ['uses' => 'HomeController@diary']);
     Route::get('diary/show/{txt}', ['as' => 'diarytxt', 'uses' => 'HomeController@show_diary']);
+    Route::get('note', ['as' => 'notes', 'uses' => 'HomeController@note']);
     Route::get('/', 'HomeController@index');
     Auth::routes();
 });
@@ -101,6 +64,7 @@ Route::group(['domain' => 'lc.astrominit.com'], function(){
     Route::get('diary', ['as' => 'devdiary', 'uses' => 'HomeController@diary']);
     Route::get('diary/{begin}', ['uses' => 'HomeController@diary']);
     Route::get('diary/show/{txt}', ['as' => 'devdiarytxt', 'uses' => 'HomeController@show_diary']);
+    Route::get('note', ['as' => 'notes', 'uses' => 'HomeController@note']);
     Route::get('/', 'HomeController@index');
     Auth::routes();
 });
