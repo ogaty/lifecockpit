@@ -1,0 +1,58 @@
+body {
+  margin: 0; }
+
+#menu {
+  -webkit-transition: margin 1s ease;
+  transition: margin 1s ease;
+  position: fixed;
+  background: #ccc;
+  width: 240px;
+  height: 100%;
+  box-sizing: border-box; }
+
+#main {
+  -webkit-transition: margin 1s ease;
+  transition: margin 1s ease;
+  margin-left: 240px;
+  box-sizing: border-box; }
+
+#header {
+  background: #ccf;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box; }
+
+#body {
+  background: #fff;
+  padding: 10px; }
+
+.hamburger {
+  box-sizing: border-box;
+  width: 3%; }
+
+.brand {
+  text-align: center;
+  box-sizing: border-box;
+  width: 94%; }
+
+.notification {
+  box-sizing: border-box;
+  width: 3%; }
+
+.menu-list {
+  list-style: none; }
+
+.menu-item {
+  padding: 0.4em 1em; }
+
+@media screen and (max-width: 450px) {
+  #menu {
+    margin-left: -240px; }
+  #main {
+    margin-left: 0px; } }
+
+/*# sourceMappingURL=lc.css.map */
