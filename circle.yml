@@ -10,5 +10,6 @@ machine:
 database:
 
   override:
+    - touch database/database_testing.sqlite
     - php artisan migrate
 
