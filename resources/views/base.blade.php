@@ -11,7 +11,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-<script type="text/javascript" src="{{ elixir('js/all.js') }}"></script>
+<script type="text/javascript" src="/vendor/vue/vue.min.js"></script>
 @yield('js')
 </head>
 <body>
@@ -41,6 +41,7 @@
             </div>
         </div>
     </div>
+@include('viewmodel')
 </body>
 </html>
 

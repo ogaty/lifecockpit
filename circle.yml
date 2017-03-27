@@ -1,0 +1,13 @@
+machine:
+
+  timezone:
+    Asia/Tokyo # Set the timezone
+
+  environment:
+    DB_CONNECTION: sqlite_testing
+    APP_ENV: testing
+
+  database:
+    override:
+      - php artisan migrate
+

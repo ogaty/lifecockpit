@@ -70,17 +70,14 @@ h2 {
     color: #f05279;
     border: 2px solid #f05279;
     text-decoration: none;
-    -webkit-transition: background-color 0.2s ease-out, color 0.2s ease-out;
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
     font-weight: bold; }
   .btn-wrap .btn:hover {
     background: #f05279;
     color: #fff;
-    -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
     transition: background-color 0.3s ease-out, color 0.3s ease-out; }
 
 .feature {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap; }
   .feature .item {
@@ -154,7 +151,6 @@ h2 {
 .imgs {
   width: 100%;
   text-align: center;
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap; }
   .imgs .image-border {
@@ -216,14 +212,12 @@ dt.lineup {
   font-size: 1.4em;
   text-align: center;
   display: block;
-  -webkit-transition: background-color 0.2s ease-out, color 0.2s ease-out;
   transition: background-color 0.2s ease-out, color 0.2s ease-out; }
 
 #page-top a:hover {
   text-decoration: none;
   background: #f05279;
   color: #fff;
-  -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
   transition: background-color 0.3s ease-out, color 0.3s ease-out; }
 
 @media (min-width: 540px) {
@@ -248,5 +242,3 @@ dt.lineup {
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box; } }
-
-/*# sourceMappingURL=microcosm.css.map */

@@ -7,10 +7,20 @@ body {
 #menu {
     transition: margin 1s ease;
     position: fixed;
-    background: #ccc;
+    background: #333;
+    color: #fff;
     width: 240px;
     height: 100%;
     box-sizing: border-box;
+}
+#menu a {
+    color: #fff;
+}
+#menu a:hover {
+    color: #fff;
+}
+#menu a:visited {
+    color: #fff;
 }
 #main {
     transition: margin 1s ease;
