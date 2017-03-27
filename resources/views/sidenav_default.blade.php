@@ -6,7 +6,7 @@
             <a href="#diary" class="menu-link" v-on:click="diary_list">Diary.txt</a>
         </li>
         <li class="menu-item">
-            <a href="{{ url('/notes') }}" class="menu-link">Notes</a>
+            <a href="{{ url('/notes') }}" class="menu-link" v-on:click="notes_list">Notes</a>
         </li>
         <li class="menu-item">
             <a href="{{ url('/logout') }}" class="menu-link"
