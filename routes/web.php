@@ -18,32 +18,12 @@ Route::group(['domain' => 'ogatism.com'], function() {
 });
 
 Route::group(['domain' => 'tc.ogatism.com'], function(){
-    Route::get('cheat', 'CheatController@index');
-    Route::get('cheat/create', 'CheatController@create');
-    Route::post('cheat', 'CheatController@store');
-    Route::get('cheat/{id}', 'CheatController@show');
-    Route::get('cheat/{id}/edit', 'CheatController@edit');
-    Route::post('cheat/{id}', 'CheatController@update');
-    Route::post('cheat/{id}', 'CheatController@destroy');
-    Route::get('business', 'BusinessController@index');
-    Route::get('dateutil', 'LockedController@dateutil');
-    Route::get('category/{category}', 'CategoryController@show');
     Route::get('home', 'HomeController@index');
     Route::get('/', 'HomeController@index');
     Auth::routes();
 });
 
 Route::group(['domain' => 'tc.astrominit.com'], function(){
-    Route::get('cheat', 'CheatController@index');
-    Route::get('cheat/create', 'CheatController@create');
-    Route::post('cheat', 'CheatController@store');
-    Route::get('cheat/{id}', 'CheatController@show');
-    Route::get('cheat/{id}/edit', 'CheatController@edit');
-    Route::post('cheat/{id}', 'CheatController@update');
-    Route::post('cheat/{id}', 'CheatController@destroy');
-    Route::get('business', 'BusinessController@index');
-    Route::get('dateutil', 'LockedController@dateutil');
-    Route::get('category/{category}', 'CategoryController@show');
     Route::get('home', 'HomeController@index');
     Route::get('/', 'HomeController@index');
     Auth::routes();

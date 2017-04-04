@@ -13,8 +13,6 @@ class ExampleTest extends TestCase
      */
     public function testBasicExample()
     {
-        $this->visit('/')
-        ->dontSee('Laravel 5');
         $response = $this->call('GET', 'http://lc.astrominit.com/');
 
         $this->assertTrue($response->status() == 200 || $response->status() == 302);

@@ -1,12 +1,15 @@
 <?php
 
+namespace Tests\Feature;
+
+use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-use App\Repositories\BlueRepository;
+use App\Services\LtService;
 
-class RepoTest extends TestCase
+class LtServiceTest extends \TestCase
 {
     /**
      * A basic test example.
@@ -15,9 +18,9 @@ class RepoTest extends TestCase
      */
     public function testExample()
     {
-        $blue = new BlueRepository();
-        $blue->all();
-        $this->assertTrue(true);
+        $lt = new LtService();
+        $ret = $lt->addLt('abc');
+        $this->assertEquals($ret, 0);
         $this->assertTrue(true);
     }
 }
