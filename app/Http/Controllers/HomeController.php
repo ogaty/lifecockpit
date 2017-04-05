@@ -6,18 +6,21 @@ use Illuminate\Http\Request;
 use File;
 use Carbon\Carbon;
 use App\Repositories\BlueRepository;
+use App\Services\CategoryService;
 
 class HomeController extends Controller
 {
     public $blue;
+    public $category;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(BlueRepository $blue)
+    public function __construct(BlueRepository $blue, CategoryService $category)
     {
         $this->blue = $blue;
+        $this->category = $category;
         $this->middleware('auth');
     }
 
@@ -28,7 +31,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if ($_SERVER['SERVER_NAME'] == 'lc.astrominit.com') {
+        $list = $this->category->getCategoryList();
+        if (\App::environment('local')) {
             $astro = true;
         } else {
             $astro = false;
@@ -36,14 +40,14 @@ class HomeController extends Controller
         return view('home', [
             'title' => config('app.name', 'LifeCockpit'),
             'pagetitle' => 'Home',
-            'categories' => [],
+            'categories' => $list,
             'astro' => $astro
         ]);
     }
 
     public function diary($begin = 0)
     {
-        if ($_SERVER['SERVER_NAME'] == 'lc.astrominit.com') {
+        if (\App::environment('local')) {
             $astro = true;
         } else {
             $astro = false;
@@ -63,7 +67,7 @@ class HomeController extends Controller
 
     public function show_diary($txt)
     {
-        if ($_SERVER['SERVER_NAME'] == 'lc.astrominit.com') {
+        if (\App::environment('local')) {
             $astro = true;
         } else {
             $astro = false;

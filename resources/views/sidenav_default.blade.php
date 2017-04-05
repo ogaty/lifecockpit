@@ -9,6 +9,14 @@
             <a href="{{ url('/notes') }}" class="menu-link" v-on:click="notes_list">Notes</a>
         </li>
         <li class="menu-item">
+            <a href="{{ url('/notes') }}" class="menu-link" v-on:click="notes_list">Notes</a>
+        </li>
+        @foreach ($categories as $category) 
+            <li class="menu-item">
+                <a href="" class="menu-link" v-on:click="notes_list">{{ $category }}</a>
+            </li>
+        @endforeach
+        <li class="menu-item">
             <a href="{{ url('/logout') }}" class="menu-link"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">

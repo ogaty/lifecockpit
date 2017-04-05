@@ -15,8 +15,7 @@ use Illuminate\Http\Request;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
-//})->middleware('auth:api');
-});
+})->middleware('auth:api');
 Route::group(['domain' => 'lc.astrominit.com'], function() {
     Route::post('/newmemo', function () {
         if (file_exists('/home/tea/diary/memo.txt')) {
@@ -34,4 +33,6 @@ Route::group(['domain' => 'lc.astrominit.com'], function() {
         return '{"result":"OK"}';
     });
     Route::post('/lt/add', 'Api\LtController@add');
+
+    Route::get('/diary/get/{file}', 'Api\DiaryController@get')->middleware('App\Http\Middleware\SimpleApi');
 });
