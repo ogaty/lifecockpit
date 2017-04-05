@@ -14,8 +14,5 @@
     "lodash": "^4.14.0",
     "vue": "^1.0.26",
     "vue-resource": "^0.9.3"
-  },
-  "dependencies": {
-    "semantic-ui": "^2.2.9"
   }
 }
