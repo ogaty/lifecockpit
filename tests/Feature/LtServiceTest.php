@@ -19,8 +19,9 @@ class LtServiceTest extends \TestCase
     public function testExample()
     {
         $lt = new LtService();
+        $lt->file = './zzz_test.txt';
         $ret = $lt->addLt('abc');
         $this->assertEquals($ret, 0);
-        $this->assertTrue(true);
+        \File::delete('./zzz_test.txt');
     }
 }

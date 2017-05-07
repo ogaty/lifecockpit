@@ -34,5 +34,6 @@ Route::group(['domain' => 'lc.astrominit.com'], function() {
     });
     Route::post('/lt/add', 'Api\LtController@add');
 
+    Route::get('/diary/files', 'Api\DiaryController@files')->middleware('App\Http\Middleware\SimpleApi');
     Route::get('/diary/get/{file}', 'Api\DiaryController@get')->middleware('App\Http\Middleware\SimpleApi');
 });

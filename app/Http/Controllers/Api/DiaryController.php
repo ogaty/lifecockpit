@@ -10,6 +10,8 @@ use \App\Services\DiaryService;
 class DiaryController extends \App\Http\Controllers\Controller
 {
     public $diary;
+    public $dir;
+
     /**
      * Create a new controller instance.
      *
@@ -18,10 +20,15 @@ class DiaryController extends \App\Http\Controllers\Controller
     public function __construct(DiaryService $diary)
     {
         $this->diary = $diary;
+        $this->dir = '/share/diary';
     }
 
-    public function get($file) {
+    public function get($dir) {
+        return ['txt' => \File::files($dir)];
+    }
 
-        return ['txt' => $file];
+    public function files() {
+        $diaries = $diary->getDiaryList();
+        return ['files' => $diaries];
     }
 }

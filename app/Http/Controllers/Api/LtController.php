@@ -14,6 +14,7 @@ class LtController extends \App\Http\Controllers\Controller
     public function __construct(LtRepository $ltRepository, LtService $ltService) {
         $this->ltRepository = $ltRepository;
         $this->ltService = $ltService;
+        $this->ltService->file = '/share/zzz.txt';
     }
 
     public function add() {
